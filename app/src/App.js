@@ -5,9 +5,9 @@ function App() {
   return (
     <div>
       <Todo
-        title={"My Todo List"}
-        content={"This is my todo list"}
-        comment={"This is my comment"}
+        title={"Input"}
+        content={"Filter"}
+        comment={"List"}
       />
     </div>
   );

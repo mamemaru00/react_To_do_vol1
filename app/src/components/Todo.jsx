@@ -1,15 +1,19 @@
 // inputファイルとFileファイルろListファイルの中身を表示してください。
-import { List, Filter, Input } from "./index";
-// import Input from "./Input";
-// import Filter from "./Filter";
-// import List from "./List";
+// import { List, Filter, Input } from "./index";
+import Input from "./Input";
+import Filter from "./Filter";
+import List from "./List";
 
 const Todo = (props) => {
+    const save = (title) => {
+        console.log("Saving: ", title);
+    };
+
     return (
         <div>
             <h1>Todo</h1>
-            <Input title={props.title} />
-            <Filter content={props.content} />
+            <Input save={props.save} />
+            <Filter state={props.state} />
             <List comment={props.comment} />
         </div>
     );

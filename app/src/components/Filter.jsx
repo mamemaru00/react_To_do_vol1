@@ -1,6 +1,10 @@
 const Filter = (props) => {
     return (
-        <h1>Filter</h1>
+        <div>
+            <button>すべて</button>
+            <button>完了</button>
+            <button>未完了</button>
+        </div>
     )
 };
 

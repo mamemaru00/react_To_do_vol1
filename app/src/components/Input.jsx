@@ -1,6 +1,9 @@
 const Input = (props) => {
     return (
-        <h1>Input</h1>
+        <form>
+            <input type="text" placeholder="タイトル" />
+            <button>保存</button>
+        </form>
     )
 };
 
