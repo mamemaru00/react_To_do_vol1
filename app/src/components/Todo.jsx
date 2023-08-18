@@ -4,12 +4,11 @@ import React, { useEffect, useState } from 'react'
 
 const Todo = (props) => {
     const [todoItems, setTodoItems] = useState([])
+    // 0：すべて　1：完了　2：未完了
     const [filterStatus, setFilterStatus] = useState(0)
-
     const addTodoItem = (title) => {
         setTodoItems([...todoItems, { id: todoItems.length + 1, title: title, is_done: false }])
     }
-
     const updateStatusTodoItem = (id) => {
         setTodoItems(todoItems.map(todoItem => {
             if (todoItem.id === id) {
@@ -18,10 +17,14 @@ const Todo = (props) => {
             return todoItem
         }))
     }
-
     const removeTodoItem = (id) => {
         setTodoItems(todoItems.filter(todoItem => todoItem.id !== id))
     }
+
+    // inputで入力した値をログに表示する
+    useEffect(() => {
+        console.log(todoItems)
+    }, [todoItems])
 
     return (
         <div>

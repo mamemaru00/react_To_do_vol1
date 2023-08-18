@@ -9,7 +9,7 @@ const Filter = (props) => {
         props.setFilterStatus(2)
     }
     return (
-        <div>
+        <div className="filters">
             <button onClick={all}>すべて</button>
             <button onClick={done}>完了</button>
             <button onClick={unDone}>未完了</button>

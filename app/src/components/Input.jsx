@@ -18,8 +18,8 @@ const Input = (props) => {
 
     return (
         <form>
-            <input type="text" placeholder="タイトル" value={title} onChange={changeTitle} />
-            <button onClick={save}>保存</button>
+            <input className='inputSave' type="text" placeholder="タイトル" value={title} onChange={changeTitle} />
+            <button className='saveButton' onClick={save}>保存</button>
         </form>
     )
 };

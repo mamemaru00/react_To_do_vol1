@@ -1,38 +1,98 @@
-.App {
+body {
+  background-image: url(../public/texture-background.jpg);
+  background-size: cover;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 40px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.inputSave {
+  width: 30%;
+  height: 50px;
+  font-size: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.saveButton {
+  width: 5%;
+  font-size: 20px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+}
+
+.filters button {
+  margin: 10px;
+  border-radius: 32px;
+  width: 8%;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.todo-items ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.todo-items ul li {
+  display: flex;
+  border: solid 1px grey;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.col-title-h {
+  width: 70%;
+  text-align: center;
+}
+
+.col-status-h {
+  width: 20%;
+  text-align: center;
+}
+
+.col-remove-h {
+  width: 10%;
+  text-align: center;
+}
+
+.col-title {
+  width: 70%;
+}
+
+.col-status {
+  width: 20%;
+  text-align: center;
+}
+
+.col-remove-h {
+  width: 10%;
+  text-align: center;
+}
+
+.remove {
+  border-radius: 32px;
+  font-weight: bold;
+  background: #00CC66;
+  color: #fff;
+  cursor: pointer;
 }

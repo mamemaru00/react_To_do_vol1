@@ -1,7 +1,12 @@
 const List = (props) => {
     return (
-        <div>
+        <div className="todo-items">
             <ul>
+                <li>
+                    <span className="col-title-h">タイトル</span>
+                    <span className="col-status-h">ステータス</span>
+                    <span className="col-remove-h" />
+                </li>
                 {props.todoItems.map(todoItem => {
                     if (props.filterStatus === 1 && !todoItem.is_done) {
                         return false
@@ -11,8 +16,8 @@ const List = (props) => {
                     }
                     return (
                         <li key={todoItem.id}>
-                            <span>{todoItem.title}</span>
-                            <span>
+                            <span className="col-title">{todoItem.title}</span>
+                            <span className="col-status">
                                 <input type="checkbox"
                                     checked={todoItem.is_done}
                                     onChange={e => {
@@ -20,8 +25,8 @@ const List = (props) => {
                                     }}
                                 />
                             </span>
-                            <span>
-                                <button
+                            <span className="col-remove-h">
+                                <button className="remove"
                                     onClick={e => {
                                         e.preventDefault()
                                         props.removeTodoItem(todoItem.id)
