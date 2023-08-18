@@ -4,11 +4,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Todo
-        title={"Input"}
-        content={"Filter"}
-        comment={"List"}
-      />
+      <Todo />
     </div>
   );
 }
