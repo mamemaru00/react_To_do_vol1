@@ -12,7 +12,8 @@ const Input = (props) => {
     // 保存ボタンのonClick用のメソッド
     const save = (e) => {
         e.preventDefault()
-        console.log(title)
+        props.addTodoItem(title)
+        setTitle('')
     }
 
     return (
