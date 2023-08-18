@@ -12,12 +12,25 @@ const Todo = (props) => {
         setTodoItems([...todoItems, { id: todoItems.length + 1, title: title, is_done: false }])
     }
 
+    const updateStatusTodoItem = (id) => {
+        setTodoItems(todoItems.map(todoItem => {
+            if (todoItem.id === id) {
+                todoItem.is_done = !todoItem.is_done
+            }
+            return todoItem
+        }))
+    }
+
+    const removeTodoItem = (id) => {
+        setTodoItems(todoItems.filter(todoItem => todoItem.id !== id))
+    }
+
     return (
         <div>
             <h1>Todo</h1>
             <Input addTodoItem={addTodoItem} />
             <Filter />
-            <List todoItems={todoItems} />
+            <List todoItems={todoItems} updateStatusTodoItem={updateStatusTodoItem} removeTodoItem={removeTodoItem} />
         </div>
     );
 }
