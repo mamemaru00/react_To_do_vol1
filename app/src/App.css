@@ -32,6 +32,15 @@ form {
   cursor: pointer;
 }
 
+.taskCount {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
 .filters {
   display: flex;
   justify-content: center;

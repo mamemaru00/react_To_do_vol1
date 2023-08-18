@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+// saveボタンをカウントして表示させる
 
 const Input = (props) => {
 
     const [title, setTitle] = useState('')
+    const [count, setCount] = useState(0)
 
     // テキストのonChange用の処理
     const changeTitle = (e) => {
@@ -14,13 +16,17 @@ const Input = (props) => {
         e.preventDefault()
         props.addTodoItem(title)
         setTitle('')
+        setCount(count + 1)
     }
 
     return (
-        <form>
-            <input className='inputSave' type="text" placeholder="タイトル" value={title} onChange={changeTitle} />
-            <button className='saveButton' onClick={save}>保存</button>
-        </form>
+        <div>
+            <form>
+                <input className='inputSave' type="text" placeholder="タイトル" value={title} onChange={changeTitle} />
+                <button className='saveButton' onClick={save}>保存</button>
+            </form>
+            <div className='taskCount'>タスク数: {count}</div>
+        </div>
     )
 };
 

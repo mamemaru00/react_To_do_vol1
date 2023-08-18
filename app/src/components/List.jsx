@@ -1,4 +1,10 @@
 const List = (props) => {
+
+    const removeItem = (id) => {
+        props.removeTodoItem(id);
+        props.decreaseCount(); // カウント減らす処理
+    }
+
     return (
         <div className="todo-items">
             <ul>
@@ -29,7 +35,7 @@ const List = (props) => {
                                 <button className="remove"
                                     onClick={e => {
                                         e.preventDefault()
-                                        props.removeTodoItem(todoItem.id)
+                                        props.removeTodoItem(todoItem.id) // カウント減らす処理を呼び出し
                                     }}
                                 >
                                     削除
